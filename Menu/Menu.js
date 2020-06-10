@@ -46,18 +46,16 @@ function menuMaker(array) {
 
       menu.classList.add('menu');
 
-      ul.textContent = menuItems;
-
-      const menuButton = document.querySelector('menu-button');
+      const menuButton = document.querySelector('.menu-button');
 
       menuButton.addEventListener('click', (e) => {
-          menu.classList.toggle('.menu--open');
+          menu.classList.toggle('menu--open');
       });
 
       return menu;
       
 };
 
-      const header = document.querySelector('header');
+      const header = document.querySelector('.header');
 
       header.appendChild(menuMaker(menuItems));
