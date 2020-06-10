@@ -171,7 +171,7 @@ const data = [
     
     //programmatically update content
     const expand = '\u25cf';
-    expandButton.textContent = expand;
+    expandButton.textContent = 'click to open';
     articleTitle.textContent = title;
     articleDate.textContent = date;
     paragraph1.textContent = firstParagraph;
@@ -180,7 +180,11 @@ const data = [
 
     //adding click event 
     expandButton.addEventListener('click', (e) => {
-      article.classList.toggle('article-open');       
+      if (e === article.classList.toggle('article-open')) {
+        e.textContent = 'click to open';
+      } else {
+        e.textContent = 'click to close';
+      }      
     });
     return article;
   };
